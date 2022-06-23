@@ -10,18 +10,18 @@ q = QuantumRegister(5, 'q')
 c = ClassicalRegister(2, 'c')
 circuit = QuantumCircuit(q, c)
 for i, counter in enumerate(range(3)):
-while (True):
-try:
-num = int(input("enter value: "))
-break
-except:
-print("please enter numbers only ")
-continue
-if ((num == 1)):
-circuit.x(q[counter ])
-print(" Qubit", counter , " saved as 1 \n")
-else:
-print(" Qubit", counter , " saved as 0 \n")
+  while (True):
+    try:
+    num = int(input("enter value: "))
+    break
+    except:
+    print("please enter numbers only ")
+    continue
+  if ((num == 1)):
+  circuit.x(q[counter ])
+  print(" Qubit", counter , " saved as 1 \n")
+  else:
+  print(" Qubit", counter , " saved as 0 \n")
 circuit.cx(q[0], q[3])
 circuit.cx(q[1], q[3])
 circuit.cx(q[2], q[3])
